@@ -1,5 +1,3 @@
 export const CriticalParent = () => {
-  return (
-    <h1>CriticalParent</h1>
-  );
-}
+  return <h1>CriticalParent</h1>;
+};

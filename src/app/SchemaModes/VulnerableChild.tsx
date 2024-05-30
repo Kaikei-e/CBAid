@@ -1,5 +1,3 @@
 export const VulnerableChild = () => {
-  return (
-    <h1>Vulnerable Child</h1>
-  );
-}
+  return <h1>Vulnerable Child</h1>;
+};
