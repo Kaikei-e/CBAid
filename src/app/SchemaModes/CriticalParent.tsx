@@ -1,3 +1,7 @@
 export const CriticalParent = () => {
-  return <h1>CriticalParent</h1>;
+  return (
+    <div className="bg-red-300">
+      <h1>CriticalParent</h1>
+    </div>
+  );
 };
