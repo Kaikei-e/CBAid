@@ -1,7 +1,11 @@
+import { SchemaModeTemplate } from "./SchemaModeTemplate";
+
 export const CriticalParent = () => {
   return (
-    <div className="w-1/4 bg-red-300 p-4 rounded-md text-center">
-      <h1>CriticalParent</h1>
-    </div>
+    <SchemaModeTemplate
+      title="Critical Parent"
+      description="This mode is overly critical and demanding, often leading to feelings of inadequacy."
+      bgColor="bg-red-300"
+    />
   );
 };
