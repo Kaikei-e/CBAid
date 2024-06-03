@@ -8,7 +8,7 @@ export default function Home() {
       <div className="z-10 w-full flex-col items-center justify-center font-mono text-sm lg:flex">
         <p className="m-2 text-3xl">CBAid</p>
         <h1 className="m-2 text-xl">Schema Modes</h1>
-        <div className="flex mt-4 flex-row w-full justify-between">
+        <div className="schema-modes flex mt-4 flex-row w-full h-5/6 justify-between">
           <HealthyAdult />
           <VulnerableChild />
           <CriticalParent />

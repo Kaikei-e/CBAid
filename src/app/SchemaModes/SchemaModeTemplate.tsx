@@ -12,7 +12,7 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
   bgColor,
 }) => {
   return (
-    <div className={`w-1/4 p-4 flex-col rounded-md text-center ${bgColor}`}>
+    <div className={`w-112 p-4 flex-col rounded-md text-center ${bgColor}`}>
       <div className="relative group">
         <div className="flex items-center justify-center space-x-2">
           <h1 className="text-xl">{title}</h1>
