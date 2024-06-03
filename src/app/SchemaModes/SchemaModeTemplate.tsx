@@ -12,7 +12,7 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
   bgColor,
 }) => {
   return (
-    <div className={`w-1/4 p-4 rounded-md text-center ${bgColor}`}>
+    <div className={`w-1/4 p-4 flex-col rounded-md text-center ${bgColor}`}>
       <div className="relative group">
         <div className="flex items-center justify-center space-x-2">
           <h1 className="text-xl">{title}</h1>
@@ -35,6 +35,16 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
         </div>
         <div className="absolute left-0 top-full mt-2 w-full bg-white text-black text-sm p-2 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           {description}
+        </div>
+      </div>
+      <div className="text-slate w-full h-full">
+        <div className="bg-blue-100 rounded-md">
+          <p>sample text below</p>
+          <p>I'm so proud of this achievement!
+          </p>
+          <p>
+            It was a long journey, but I finally made it! 🎉
+          </p>
         </div>
       </div>
     </div>
