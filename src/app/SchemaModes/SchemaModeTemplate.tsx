@@ -40,11 +40,8 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
       <div className="text-slate w-full h-full">
         <div className="bg-blue-100 rounded-md">
           <p>sample text below</p>
-          <p>I'm so proud of this achievement!
-          </p>
-          <p>
-            It was a long journey, but I finally made it! 🎉
-          </p>
+          <p>I&apos;m so proud of this achievement!</p>
+          <p>It was a long journey, but I finally made it! 🎉</p>
         </div>
       </div>
     </div>
