@@ -47,7 +47,7 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
       </div>
       <div className="text-slate w-full h-full">
         <div className="bg-blue-100 rounded-md">
-          <div className="flex flex-col bg-blue-100">
+          <div className="flex flex-col bg-blue-100 rounded-md m-2">
             {Array.isArray(thoughts) &&
               thoughts.map((thought, index) => (
                 <div
@@ -57,6 +57,11 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
                   <span className="text-md">{thought.content}</span>
                 </div>
               ))}
+            {
+              <div className="flex items-center space-x-2 p-2">
+                <span className="text-md">{test.content}</span>
+              </div>
+            }
           </div>
         </div>
       </div>
