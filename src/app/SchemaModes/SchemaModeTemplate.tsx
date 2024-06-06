@@ -1,16 +1,24 @@
 import React from "react";
+import { emotionalStatement } from "@/app/types/emotionalStatement";
 
 interface SchemaModeProps {
   title: string;
   description: string;
   bgColor: string;
+  thoughts?: emotionalStatement[];
 }
 
 export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
   title,
   description,
   bgColor,
+  thoughts = [],
 }) => {
+  const test: emotionalStatement = {
+    date: new Date(),
+    content: "I am happy.",
+  }
+
   return (
     <div className={`w-112 p-4 flex-col rounded-md text-center ${bgColor}`}>
       <div className="relative group">
@@ -39,9 +47,13 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
       </div>
       <div className="text-slate w-full h-full">
         <div className="bg-blue-100 rounded-md">
-          <p>sample text below</p>
-          <p>I&apos;m so proud of this achievement!</p>
-          <p>It was a long journey, but I finally made it! 🎉</p>
+          <div className="flex flex-col bg-blue-100">
+            {Array.isArray(thoughts) && thoughts.map((thought, index) => (
+              <div key={thought.date.toString() + index} className="flex items-center space-x-2 p-2">
+                <span className="text-md">{thought.content}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
