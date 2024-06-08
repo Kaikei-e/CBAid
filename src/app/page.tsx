@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
-import { VulnerableChild } from "@/app/SchemaModes/VulnerableChild";
-import { HealthyAdult } from "@/app/SchemaModes/HealthyAdult";
-import { CriticalParent } from "@/app/SchemaModes/CriticalParent";
+import { useEffect, useState } from "react";
+import { VulnerableChild } from "@/app/components/SchemaModes/VulnerableChild";
+import { HealthyAdult } from "@/app/components/SchemaModes/HealthyAdult";
+import { CriticalParent } from "@/app/components/SchemaModes/CriticalParent";
 import { emotionalStatement } from "@/app/types/emotionalStatement";
+import { InputForm } from "@/app/components/forms/inputForm";
 
 export default function Home() {
   const [healthyAdultThoughts, setHealthyAdultThoughts] = useState<
@@ -25,6 +26,9 @@ export default function Home() {
           <HealthyAdult thoughts={healthyAdultThoughts} />
           <VulnerableChild thoughts={vulnerableChildThoughts} />
           <CriticalParent thoughts={criticalParentThoughts} />
+        </div>
+        <div className="m-4">
+          <InputForm />
         </div>
       </div>
     </main>
