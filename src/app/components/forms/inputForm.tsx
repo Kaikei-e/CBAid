@@ -1,5 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Inputs } from "@/app/types/inputs";
+import { ThoughtInputs } from "@/app/types/thoughtInputs";
 
 export function InputForm() {
   const {
@@ -7,8 +7,8 @@ export function InputForm() {
     handleSubmit,
     formState: { errors },
     watch,
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  } = useForm<ThoughtInputs>();
+  const onSubmit: SubmitHandler<ThoughtInputs> = (data) => {
     console.log(data);
   };
 
