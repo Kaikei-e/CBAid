@@ -20,11 +20,13 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
   };
 
   return (
-    <div className={`w-112 p-4 flex-col rounded-md text-center ${bgColor}`}>
-      <div className="relative group">
-        <div className="flex items-center justify-center space-x-2">
+    <div
+      className={`each-mode flex flex-col w-full h-full p-4 rounded-md text-center ${bgColor}`}
+    >
+      <div className="">
+        <div className="relative group flex items-center justify-center space-x-2">
           <h1 className="text-xl">{title}</h1>
-          <span className="text-lg cursor-pointer">
+          <span className="text-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -40,14 +42,14 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
               />
             </svg>
           </span>
-        </div>
-        <div className="absolute left-0 top-full mt-2 w-full bg-white text-black text-sm p-2 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          {description}
+          <div className="absolute left-0 top-full mt-2 w-full bg-white text-black text-sm p-2 rounded-md shadow-lg group-hover:opacity-100 opacity-0 transition-opacity duration-300">
+            {description}
+          </div>
         </div>
       </div>
-      <div className="text-slate w-full h-full">
-        <div className="bg-blue-100 rounded-md">
-          <div className="flex flex-col bg-blue-100 rounded-md m-2">
+      <div className="text-slate w-full flex-grow">
+        <div className="bg-blue-100 rounded-md h-full">
+          <div className="flex flex-col bg-blue-100 rounded-md m-2 h-full">
             {Array.isArray(thoughts) &&
               thoughts.map((thought, index) => (
                 <div
@@ -57,11 +59,9 @@ export const SchemaModeTemplate: React.FC<SchemaModeProps> = ({
                   <span className="text-md">{thought.content}</span>
                 </div>
               ))}
-            {
-              <div className="flex items-center space-x-2 p-2">
-                <span className="text-md">{test.content}</span>
-              </div>
-            }
+            <div className="flex items-center space-x-2 p-2">
+              <span className="text-md">{test.content}</span>
+            </div>
           </div>
         </div>
       </div>
